@@ -182,7 +182,7 @@ namespace PictureToAscii
             string result = null;
             foreach (char c in SizePicker.Text)
             {
-                if (char.IsLetter(c))
+                if (!char.IsDigit(c))
                 {
                     result = SizePicker.Text.Replace(c.ToString(), "");
                     SizePicker.Text = result;
